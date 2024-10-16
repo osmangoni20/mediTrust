@@ -1,0 +1,69 @@
+@import "../../abstract//variable.module.scss";
+.patientService,
+.prescription {
+  padding: 40px 20px;
+  margin: 20px 0px;
+  background-color: $Lightgray;
+  img {
+    height: 300px !important;
+  }
+  .service {
+    width: 50%;
+  }
+  .serviceTitle,
+  .rules {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px;
+    line-height: 24px;
+  }
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1;
+    // margin: 0 5px;
+    // background: #f1f1f1;
+  }
+}
+.prescription {
+  padding: 20px;
+  margin: 40px 0px;
+
+  h2 {
+    color: $light;
+  }
+  .prescriptionImage {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 450px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .patientService,
+  .prescription {
+    padding: 0px;
+    .service {
+      width: 100%;
+    }
+  }
+
+  .prescription {
+    padding: 20px;
+    margin: 0px 0px;
+
+    h2 {
+      color: $light;
+    }
+    .prescriptionImage {
+      display: none;
+    }
+  }
+}

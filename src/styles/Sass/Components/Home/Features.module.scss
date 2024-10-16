@@ -1,0 +1,109 @@
+@import "../../abstract//variable.module.scss";
+
+.features {
+  padding: 20px;
+
+  .featuresCard {
+    width: 320px;
+    h3 {
+      color: $primary;
+    }
+  }
+  .service {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px;
+
+    .icon {
+      height: 20px;
+      width: 20px;
+      padding-right: 5px;
+    }
+  }
+  .dot {
+    width: 16px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1;
+    // margin: 0 5px;
+    // background: #f1f1f1;
+  }
+}
+
+.title {
+  width: 100%;
+  color: $light;
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  h2 {
+    width: 250px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 2px solid $light;
+    border-radius: 10px 5px 10px 5px;
+    position: relative;
+    border-bottom: 3px solid $primary;
+    padding: 5px;
+  }
+}
+// {
+//   width: 100px;
+//   height: 100px;
+//   background-color: red;
+
+// }
+
+@keyframes titleAnimation {
+  0% {
+    background-color: $primary;
+    border-radius: 5px 10px 5px 10px;
+    color: white;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: $light;
+    border-radius: 20px 10px 20px 10px;
+    color: white;
+    left: 25%;
+    top: 0px;
+  }
+  50% {
+    background-color: $gray;
+    color: white;
+    border-radius: 10px 15px 10px 15px;
+    left: 40%;
+    top: 0px;
+  }
+  75% {
+    background-color: $Lightgray;
+    color: black;
+    border-radius: 15px 10px 10px 15px;
+    left: 65%;
+    top: 0px;
+  }
+  100% {
+    background-color: $primary;
+    color: white;
+    left: 82%;
+    top: 0px;
+  }
+}
+
+@media (max-width: 640px) {
+  .features {
+    padding: 0px;
+    .title {
+      width: 100%;
+      color: $light;
+      margin: 20px 0px;
+      h2 {
+        animation-name: none;
+      }
+    }
+  }
+}

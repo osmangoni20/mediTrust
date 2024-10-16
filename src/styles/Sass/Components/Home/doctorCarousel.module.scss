@@ -1,0 +1,65 @@
+@import "../../abstract//variable.module.scss";
+.carousel {
+  // background-color: $Lightgray;
+  padding: 50px 0px;
+  margin-top: 45px;
+  .titlePart {
+    padding: 20px;
+    .title {
+      color: $light;
+      font-size: 25px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+  .DoctorCarousel_inner {
+    max-width: 95%;
+    margin: 10px auto;
+
+    .doctorCard {
+      cursor: pointer;
+      border: 2px solid $light;
+     
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+      }
+    
+    }
+    .doctorCardBody {
+      color: white;
+      background-color: #4C9DC3;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .carousel {
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 0px;
+    margin-top: 5px;
+  }
+  .DoctorCarousel_inner {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+  .titlePart {
+    padding: 20px;
+    .title {
+      color: $light;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+    }
+    p {
+      display: none;
+    }
+  }
+}

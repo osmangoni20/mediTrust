@@ -1,0 +1,67 @@
+@import "../../../abstract//variable.module.scss";
+.bannerAndDoctorAdd {
+  margin-top: 171px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  // padding: 10px;
+  border-bottom: 2px solid $Lightgray;
+  height: 430px;
+  .doctorAdd {
+    width: 100%;
+
+    img {
+      // height: 396px !important;
+
+      margin-bottom: 0px !important;
+      padding: 0px !important;
+    }
+  }
+}
+
+// .banner {
+// }
+
+@media (max-width: 640px) {
+  .bannerAndDoctorAdd {
+    display: block;
+    height: 100%;
+    border-bottom: 2px solid $Lightgray;
+    .doctorAdd {
+      height: 200px;
+      img {
+        height: 200px !important;
+        width: 100% !important;
+        margin-bottom: 0px !important;
+        padding: 0px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .bannerAndDoctorAdd {
+    display: block;
+    // padding: 10px;
+    border-bottom: 2px solid $Lightgray;
+  }
+  .doctorAdd {
+    img {
+      width: 768px !important;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .bannerAndDoctorAdd {
+    display: block;
+    // padding: 10px;
+    border-bottom: 2px solid $Lightgray;
+
+    .doctorAdd {
+      img {
+        width: 1138px !important;
+      }
+    }
+  }
+}

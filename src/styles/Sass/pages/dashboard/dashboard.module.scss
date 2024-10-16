@@ -1,0 +1,93 @@
+.menuAvatar {
+  display: none;
+}
+.dashboard {
+  background-color: #f2edf3;
+
+  aside {
+    width: 20%;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+  }
+  main {
+    width: 80%;
+    padding: 0px 35px;
+
+    .dashboardBody {
+      display: grid;
+      grid-template-columns: 70% 30%;
+      gap: 10px;
+    }
+  }
+}
+
+.dashboard .active_menu {
+  height: 60px;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 600;
+  border-bottom: 2px solid rgb(207, 204, 204);
+}
+.logo {
+  width: 40px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    aside {
+      width: 30%;
+    }
+    main {
+      width: 70%;
+      padding: 0px 15px;
+
+      .dashboardBody {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard {
+    aside {
+      display: none;
+    }
+    main {
+      width: 100%;
+      padding: 0px 15px;
+    }
+  }
+
+  .userName {
+    display: none;
+  }
+  .dashboardBody {
+    display: block;
+    .aside {
+      width: 100%;
+      position: relative;
+      top: 0;
+    }
+    main {
+      width: 100%;
+      padding: 0px 5px;
+    }
+  }
+  .menuAvatar {
+    display: block;
+    padding-top: 11px;
+  }
+
+  .logo {
+    width: 34px;
+  }
+}
+
+/* .NewNotice .noticeHeader,
+  .chartHeader {
+    background-color: rgb(99, 223, 212);
+    padding: 8px;
+    font-size: 20px;
+  } */
