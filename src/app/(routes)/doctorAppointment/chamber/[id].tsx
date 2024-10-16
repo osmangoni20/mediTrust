@@ -1,9 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import Meta from "@/components/common/Meta";
+import BookingAppointment from "@/components/Doctor/Appointments/BookingAppointment/BookingAppointment";
 import { useEffect, useState } from "react";
-import Footer from "../../../components/common/Footer";
-import Header from "../../../components/common/Header/Header";
-import Meta from "../../../components/common/Meta";
-import AppointmentDate from "../../../components/Doctor/Appointments/AppointmentHeader/AppointmentDate";
-import BookingAppointment from "../../../components/Doctor/Appointments/BookingAppointment/BookingAppointment";
+import AppointmentDate from "@/components/Doctor/Appointments/AppointmentHeader/AppointmentDate";
 
 const Appointment = ({ data }: { data: any }) => {
   const [doctorData, setDoctorData] = useState({});
@@ -27,13 +26,10 @@ const Appointment = ({ data }: { data: any }) => {
         name="viewport"
         description="initial-scale=1.0, width=device-width"
       />
-      <Header />
-      <AppointmentDate
-        selected={selectedDate}
-        setSelected={setSelected}
-      ></AppointmentDate>
+      <AppointmentDate selected={selectedDate}  setSelected={setSelected} ></AppointmentDate>
+      
       <BookingAppointment date={selectedDate} type="chamber" data={data}></BookingAppointment>
-      <Footer />
+    
     </div>
   );
 };

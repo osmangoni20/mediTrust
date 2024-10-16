@@ -15,9 +15,10 @@ import { IoIosCall } from "react-icons/io";
 import { TiLocation } from "react-icons/ti";
 import ambulanceImage from "../../assets/image/ambulance-dir.png";
 import style from "../../styles/Sass/pages/ambulance/_ambulance.module.scss";
-import SimpleButton from "@/component/Custom/Button/SimpleButton";
-import Meta from "@/component/common/Meta";
-import MapModel from "@/component/common/Model/MapModel";
+import Meta from "@/components/common/Meta";
+import MapModel from "@/components/common/Model/MapModel";
+import SimpleButton from "@/components/Custom/Button/SimpleButton";
+
 
 const Page = async() => {
   const res = await fetch(`https://medstar-backend.onrender.com/ambulance`);
