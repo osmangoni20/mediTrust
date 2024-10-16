@@ -13,7 +13,7 @@ import {
 import { GrLocation } from "react-icons/gr";
 import { IoIosCall } from "react-icons/io";
 import { TiLocation } from "react-icons/ti";
-import ambulanceImage from "../../assets/image/ambulance-dir.png";
+import ambulanceImage from "@/public/image/ambulance-dir.png";
 import style from "../../styles/Sass/pages/ambulance/_ambulance.module.scss";
 import Meta from "@/components/common/Meta";
 import MapModel from "@/components/common/Model/MapModel";

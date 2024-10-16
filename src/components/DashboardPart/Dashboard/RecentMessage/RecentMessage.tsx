@@ -1,6 +1,6 @@
 import Image from "next/image";
-import style from "../../../../styles/Sass/Components/DashboardPart/Dashboard/_recentMessage.module.scss";
-import doc from "/assets/image/2doctor.png";
+import style from "../@/styles/Sass/Components/DashboardPart/Dashboard/_recentMessage.module.scss";
+import doc from "@/public/image/2doctor.png";
 
 interface Message {
   _id: string;

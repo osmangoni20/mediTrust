@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import style from "../../../styles/Sass/Components/DashboardPart/_menuBody.module.scss";
+import style from "@/styles/Sass/Components/DashboardPart/_menuBody.module.scss";
 import CustomModel from "../../common/Model/CustomModel";
 import ProgressModel from "../../common/Model/ProgressModel";
 

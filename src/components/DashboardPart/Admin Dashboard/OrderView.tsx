@@ -1,4 +1,4 @@
-import style from "../../../styles/Sass/Components/DashboardPart/_menuBody.module.scss";
+import style from "@/styles/Sass/Components/DashboardPart/_menuBody.module.scss";
 
 const OrderView = ({
   HandleRequestAction,

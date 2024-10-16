@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { DashboardFakeData } from "../../../../Database/DashboardFakeData";
-import style from "../../../../styles/Sass/Components/DashboardPart/Dashboard/_recentOrders.module.scss";
+import style from "../@/styles/Sass/Components/DashboardPart/Dashboard/_recentOrders.module.scss";
 import DashboardInfoModel from "../../../common/Model/DashboardInfoModel";
 const RecentOrder = ({ orderData }: any) => {
   const [model, setModel] = useState<boolean>(false);

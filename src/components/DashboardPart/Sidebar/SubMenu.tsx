@@ -24,7 +24,7 @@ import {
   MdReviews,
 } from "react-icons/md";
 import { RiAdvertisementFill } from "react-icons/ri";
-import style from "../../../styles/Sass/Components/DashboardPart/_sidebar.module.scss";
+import style from "@/styles/Sass/Components/DashboardPart/_sidebar.module.scss";
 
 const SubMenu = ({ item }: any) => {
   const [showOptions, setShowOptions] = useState<boolean>(false);

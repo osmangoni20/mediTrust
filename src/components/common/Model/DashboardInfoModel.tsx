@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Dispatch, SetStateAction } from "react";
-import style from "../../../styles/Sass/common/model/dynamicModel.module.scss";
-import demoImage from "/assets/image/2doctor.png";
+import style from "@/styles/Sass/common/model/dynamicModel.module.scss";
+import demoImage from "@/public/image/2doctor.png";
 // interface Data {
 //   id: number;
 //   img: any;

@@ -1,6 +1,6 @@
-import firstImage from '../../../assets/image/slider1.jpg';
-import secondImage from '../../../assets/image/slider2.jpg';
-import thirdImage from '../../../assets/image/slider3.jpg';
+import firstImage from '@/public/image/slider1.jpg';
+import secondImage from '@/public//image/slider2.jpg';
+import thirdImage from '@/public//image/slider3.jpg';
 export const images=[
     { 
         title:"",

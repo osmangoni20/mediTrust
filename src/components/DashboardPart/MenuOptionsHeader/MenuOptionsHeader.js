@@ -1,5 +1,5 @@
 
-import style from '../../../styles/Sass/Components/DashboardPart/_menuOptionheader.module.scss';
+import style from '@/styles/Sass/Components/DashboardPart/_menuOptionheader.module.scss';
 const MenuOptionsHeader = ({ AllHeaders }) => {
   // console.log(AllHeaders)
   return (

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import patientService3Image from "../../assets/image/doctor_and_patient.png";
-import patientService1Image from "../../assets/image/online doctor.png";
-import patientServiceImage from "../../assets/image/onlineTeleconsultation.jpg";
-import style from "../../styles/Sass/Components/Home/PatientServiceAndPrescriptionSystem.module.scss";
+import patientService3Image from "@/public/image/doctor_and_patient.png";
+import patientService1Image from "@/public/image/online doctor.png";
+import patientServiceImage from "@/public/image/onlineTeleconsultation.jpg";
+import style from "@/styles/Sass/Components/Home/PatientServiceAndPrescriptionSystem.module.scss";
 
 const patientService = [
   {

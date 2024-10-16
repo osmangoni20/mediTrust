@@ -3,10 +3,10 @@ import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../../../State";
-import style from "../../../styles/Sass/Components/DashboardPart/_dashboardHeader.module.scss";
+import style from "@/styles/Sass/Components/DashboardPart/_dashboardHeader.module.scss";
 import SimpleButton from "../../Custom/Button/SimpleButton";
 import useFirebase from "../../hooks/useFirebase";
-import logo from "/assets/image/medstar.png";
+import logo from "@/public/image/medstar.png";
 const DashboardHeader = () => {
   const { user, Logout }: any = useFirebase();
   const dispatch = useDispatch();

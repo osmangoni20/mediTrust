@@ -1,8 +1,8 @@
-
+'use client'
 import Image from 'next/image';
 import { useState } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import style from '../../../styles/Sass/Components/Home/banner/_carousel.module.scss';
+import style from '@/styles/Sass/Components/Home/banner/_carousel.module.scss';
 import { images } from './CrouselData';
 const Banner = () => {
   const [currImg, setCurrImg] = useState(0);

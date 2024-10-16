@@ -5,7 +5,7 @@ import { BsCalendarDateFill, BsImages } from "react-icons/bs";
 import { FaUserAlt } from "react-icons/fa";
 import { MdMarkEmailUnread } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import style from "../../../styles/Sass/pages/auth/login&signIn.module.scss";
+import style from "@/styles/Sass/pages/auth/login&signIn.module.scss";
 import Meta from "../../common/Meta";
 import useFirebase from "../../hooks/useFirebase";
 const InputFiledInfo = [

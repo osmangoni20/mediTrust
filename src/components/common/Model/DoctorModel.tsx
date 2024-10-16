@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
-import style from "../../../styles/Sass/common/model/_doctorModel.module.scss";
+import style from "@/styles/Sass/common/model/_doctorModel.module.scss";
 import SimpleButton from "../../Custom/Button/SimpleButton";
 interface Data {
   _id: string;

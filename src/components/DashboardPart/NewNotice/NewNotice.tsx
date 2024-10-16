@@ -1,6 +1,6 @@
 import { SetStateAction, useEffect, useState } from "react";
 import { BsArrowRightCircleFill } from "react-icons/bs";
-import style from "../../../styles/Sass/Components/DashboardPart/NewNotice.module.scss";
+import style from "@/styles/Sass/Components/DashboardPart/NewNotice.module.scss";
 import { newNotice } from "../fakeData";
 import SingleNotice from "../SingleNotice/SingleNotice";
 type newNotice = {

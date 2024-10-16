@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators, State } from "../../../State";
-import style from "../../../styles/Sass/common/model/dynamicModel.module.scss";
+import style from "@/styles/Sass/common/model/dynamicModel.module.scss";
 import SimpleButton from "../../Custom/Button/SimpleButton";
 import useFirebase from "../../hooks/useFirebase";
 import CustomModel from "./CustomModel";

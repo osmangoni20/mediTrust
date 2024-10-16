@@ -1,5 +1,5 @@
 import Link from "next/link";
-import style from "../../../styles/Sass/Components/Order/CostInformation.module.scss";
+import style from "@/styles/Sass/Components/Order/CostInformation.module.scss";
 import LargestButton from "../../Custom/Button/LargestButton";
 import { useAppSelector } from "../../../redux/hooks";
 

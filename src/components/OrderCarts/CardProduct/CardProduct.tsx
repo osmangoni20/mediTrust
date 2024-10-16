@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators, State } from "../../../State";
-import style from "../../../styles/Sass/Components/OrderCart/CartProduct.module.scss";
+import style from "@/styles/Sass/Components/OrderCart/CartProduct.module.scss";
 import SimpleButton from "../../Custom/Button/SimpleButton";
 import { useAppDispatch } from "../../../redux/hooks";
 import { deleteProduct, updateProduct } from "../../../redux/feature/CartSlice";

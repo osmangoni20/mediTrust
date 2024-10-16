@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import style from "../../../styles/Sass/common/model/dynamicModel.module.scss";
+import style from "@/styles/Sass/common/model/dynamicModel.module.scss";
 
 const NoticeModel = ({
   data,

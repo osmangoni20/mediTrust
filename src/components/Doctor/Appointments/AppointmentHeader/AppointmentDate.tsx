@@ -3,7 +3,7 @@ import { format } from 'date-fns';
 import Image from 'next/image';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
-import doctor from '../../../../assets/image/onlineTeleconsultation.jpg';
+import doctor from '../../@/public/image/onlineTeleconsultation.jpg';
 const AppointmentDate = ({selected,setSelected}:any) => {
 
     let footer = <p>Please pick a day.</p>;

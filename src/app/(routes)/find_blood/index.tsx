@@ -6,7 +6,7 @@ import Header from "../../components/common/Header/Header";
 import Meta from "../../components/common/Meta";
 import SimpleButton from "../../components/Custom/Button/SimpleButton";
 import style from "../../styles/Sass/pages/findBlood/_findBlood.module.scss";
-import demoImag from "/assets/image/personlogo.jpg";
+import demoImag from "@/public/image/personlogo.jpg";
 interface Data {
   id: number;
   blood_Group: string;

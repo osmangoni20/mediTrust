@@ -8,7 +8,7 @@ import {
   Tooltip,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import style from "../../../styles/Sass/Components/DashboardPart/_sellChart.module.scss";
+import style from "@/styles/Sass/Components/DashboardPart/_sellChart.module.scss";
 ChartJS.register(
   CategoryScale,
   LinearScale,

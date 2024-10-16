@@ -1,7 +1,7 @@
 import { FaCity, FaUserAlt } from "react-icons/fa";
 import { HiCurrencyBangladeshi } from "react-icons/hi";
 import { IoLogoDesignernews } from "react-icons/io";
-import style from "../../../../styles/Sass/Components/DashboardPart/_dashboardCard.module.scss";
+import style from "../@/styles/Sass/Components/DashboardPart/_dashboardCard.module.scss";
 
 const DashboardCard = ({ cardValue }: any) => {
   const { totalIncome, totalNewOrder, totalOrder, totalSuccessOrder } =

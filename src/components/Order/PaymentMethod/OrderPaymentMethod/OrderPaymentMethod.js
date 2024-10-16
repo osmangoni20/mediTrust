@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useState } from 'react';
-import style from '../../../../styles/Sass/Components/Order/PaymentMethod.module.scss';
+import style from '../@/styles/Sass/Components/Order/PaymentMethod.module.scss';
 const PaymentMethodInfo = [
     {
         id: "1",

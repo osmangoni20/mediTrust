@@ -1,7 +1,7 @@
 // import logo from '../../../aseets/images/ehostel';
 // import Button from "../../custom/Button/Button";
 import Link from "next/link";
-import style from "../../../styles/Sass/common/Header/_navbar.module.scss";
+import style from "@/styles/Sass/common/Header/_navbar.module.scss";
 
 const Navbar = () => {
   const Links = [

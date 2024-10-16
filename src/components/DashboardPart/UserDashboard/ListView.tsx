@@ -7,8 +7,8 @@ interface Iprops {
 }
 import Image from "next/image";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import tableStyle from "../../../styles/Sass/Components/DashboardPart/tableStyle.module.scss";
-import style from "../../../styles/Sass/Components/DashboardPart/_menuBody.module.scss";
+import tableStyle from "@/styles/Sass/Components/DashboardPart/tableStyle.module.scss";
+import style from "@/styles/Sass/Components/DashboardPart/_menuBody.module.scss";
 
 const AdminView = ({
   tableData,

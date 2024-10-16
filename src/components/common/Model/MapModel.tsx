@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Dispatch, SetStateAction } from "react";
-import style from "../../../styles/Sass/common/model/dynamicModel.module.scss";
-import Map from "/assets/image/map.png";
+import style from "@/styles/Sass/common/model/dynamicModel.module.scss";
+import Map from "@/public/image/map.png";
 const MapModel = ({
   setModel,
   showModel,

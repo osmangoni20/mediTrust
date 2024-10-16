@@ -4,7 +4,7 @@ import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
 import { MdAddIcCall } from "react-icons/md";
-import style from "../../../styles/Sass/Components/Order/_CustomerInformation.module.scss";
+import style from "@/styles/Sass/Components/Order/_CustomerInformation.module.scss";
 
 const InputField = ({
   HandleFieldValue,

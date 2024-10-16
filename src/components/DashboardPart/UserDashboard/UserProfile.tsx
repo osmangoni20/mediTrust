@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import profileStyle from "../../../styles/Sass/Components/DashboardPart/Dashboard/UserDashboard/userProfile.module.scss";
+import profileStyle from "@/styles/Sass/Components/DashboardPart/Dashboard/UserDashboard/userProfile.module.scss";
 import useFirebase from "../../hooks/useFirebase";
-import cameraImage from "/assets/image/camera.png";
-import profileImage from "/assets/image/personlogo.jpg";
+import cameraImage from "@/public/image/camera.png";
+import profileImage from "@/public/image/personlogo.jpg";
 const field = [
   {
     name: "First Name",
@@ -52,10 +52,10 @@ import { BiDonateBlood } from "react-icons/bi";
 import { BsCalendarDateFill } from "react-icons/bs";
 import { FaUserAlt } from "react-icons/fa";
 import { MdMarkEmailUnread } from "react-icons/md";
-import style from "../../../styles/Sass/Components/DashboardPart/_menuBody.module.scss";
+import style from "@/styles/Sass/Components/DashboardPart/_menuBody.module.scss";
 import CustomModel from "../../common/Model/CustomModel";
 import ProgressModel from "../../common/Model/ProgressModel";
-import loader from "/assets/svg/Spin-1s-200px.svg";
+import loader from "@/public/svg/Spin-1s-200px.svg";
 const UserProfile = () => {
   const [userData, setUserData] = useState<any>({});
   const [fieldValue, setFieldValue] = useState<any>({});

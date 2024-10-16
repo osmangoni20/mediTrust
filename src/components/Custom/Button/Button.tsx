@@ -1,5 +1,5 @@
-import variable from "../../../styles/Sass/abstract/_variable.module.scss";
-import style from "../../../styles/Sass/common/custom/button.module.scss";
+import variable from "@/styles/Sass/abstract/_variable.module.scss";
+import style from "@/styles/Sass/common/custom/button.module.scss";
 const Button = (props: {
   children:
     | boolean

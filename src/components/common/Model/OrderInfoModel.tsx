@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Dispatch, SetStateAction } from "react";
-import modelStyle from "../../../styles/Sass/common/model/dynamicModel.module.scss";
-import style from "../../../styles/Sass/common/model/orderInfoModel.module.scss";
+import modelStyle from "@/styles/Sass/common/model/dynamicModel.module.scss";
+import style from "@/styles/Sass/common/model/orderInfoModel.module.scss";
 const OrderInfoModel = ({
   data,
   setOrderModel,

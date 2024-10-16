@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import style from "../../../styles/Sass/common/model/labTestModel.module.scss";
+import style from "@/styles/Sass/common/model/labTestModel.module.scss";
 interface Data {
   id: number;
   testName: string;

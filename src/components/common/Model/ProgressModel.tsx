@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { ImSpinner7 } from "react-icons/im";
-import style from "../../../styles/Sass/common/model/customModel.module.scss";
+import style from "@/styles/Sass/common/model/customModel.module.scss";
 const ProgressModel = () => {
   const route = useRouter();
 

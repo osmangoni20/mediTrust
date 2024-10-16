@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
-import style from "../../styles/Sass/Components/Home/Medicine.module.scss";
+import style from "@/styles/Sass/Components/Home/Medicine.module.scss";
 import Product from "../common/Product";
 import LargestButton from "../Custom/Button/LargestButton";
+import { GetServerSideProps } from "next";
 interface Data {
+  _id:string;
   id: number;
   category: string;
   name: string;
@@ -15,22 +16,8 @@ interface Data {
   used: string;
   sideEffect: string;
 }
-const Medicine = () => {
-  const [medicineProduct, setMedicineProduct] = useState<Data[]>([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      // get the data from the api
-      const res = await fetch("https://medstar-backend.onrender.com/medicine");
-      // convert data to json
-      const data = await res.json();
-      setMedicineProduct(data);
-    };
+const Medicine = ({data}:{data:Data[]}) => {
 
-    // call the function
-    fetchData()
-      // make sure to catch any error
-      .catch(console.error);
-  }, []);
 
   return (
     <div className={`${style.medicine}`}>
@@ -40,8 +27,8 @@ const Medicine = () => {
 
       <div className="mt-10">
         <div className="md:grid md:grid-cols-5 gap-4">
-          {medicineProduct.map((product) => (
-            <Product key={product.id} product={product} />
+          {data.map((product) => (
+            <Product key={product._id} product={product} />
           ))}
         </div>
         <div className="flex justify-center my-10">
@@ -64,5 +51,9 @@ const Medicine = () => {
 //     },
 //   };
 // };
-
+export const getServerSideProps =(async()=>{
+  const res = await fetch('https://medstar-backend.onrender.com/doctor')
+  const data: Data = await res.json()
+  return {props:{data}}
+})satisfies GetServerSideProps<{ data: Data }>
 export default Medicine;

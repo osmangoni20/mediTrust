@@ -6,7 +6,7 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { BsCalendarDateFill } from "react-icons/bs";
 import { MdTitle } from "react-icons/md";
 // import "../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import style from "../../../styles/Sass/Components/DashboardPart/_menuBody.module.scss";
+import style from "@/styles/Sass/Components/DashboardPart/_menuBody.module.scss";
 import CustomModel from "../../common/Model/CustomModel";
 import CreateNoticeInfoData from "./CreateNoticeInfoData";
 const Editor = dynamic(

@@ -9,8 +9,8 @@ import {
 } from "react-icons/bs";
 import { FaDisease, FaUserAlt } from "react-icons/fa";
 import { MdAddIcCall } from "react-icons/md";
-import modelStyle from "../../../styles/Sass/common/model/_doctorModel.module.scss";
-import style from "../../../styles/Sass/pages/Shipping.module.scss";
+import modelStyle from "@/styles/Sass/common/model/_doctorModel.module.scss";
+import style from "@/styles/Sass/pages/Shipping.module.scss";
 import SimpleButton from "../../Custom/Button/SimpleButton";
 import useFirebase from "../../hooks/useFirebase";
 import {

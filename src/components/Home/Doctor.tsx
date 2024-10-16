@@ -1,12 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import style from "../../styles/Sass/Components/Home/doctorCarousel.module.scss";
+import style from "@/styles/Sass/Components/Home/doctorCarousel.module.scss";
 import SimpleButton from "../Custom/Button/SimpleButton";
 import useFirebase from "../hooks/useFirebase";
+import { GetServerSideProps } from "next";
 
 interface doctorData {
   _id: any;
@@ -18,6 +19,7 @@ interface doctorData {
   education: string;
   jobTitle: string;
 }
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 [];
 function SampleNextArrow(props: any) {
   const { className, style, onClick } = props;
@@ -48,22 +50,9 @@ function SamplePrevArrow(props: any) {
     />
   );
 }
-const Doctor = () => {
-  const [doctor, setDoctor] = useState<doctorData[]>([]);
+const Doctor = ({data}:{data:doctorData[]}) => {
   const { user }: any = useFirebase();
-  useEffect(() => {
-    const fetchData = async () => {
-      // get the data from the api
-      const res = await fetch("https://medstar-backend.onrender.com/doctor");
-      // convert data to json
-      const data = await res.json();
-      setDoctor(data);
-    };
-    // call the function
-    fetchData()
-      // make sure to catch any error
-      .catch(console.error);
-  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -104,7 +93,7 @@ const Doctor = () => {
     ],
   };
 
-  console.log(doctor);
+  console.log(data);
   return (
     <div className={`${style.carousel} transition-all duration-500 ease-in`}>
       {/* <div
@@ -118,7 +107,7 @@ const Doctor = () => {
 
       <div className={`${style.DoctorCarousel_inner} `}>
         <Slider {...settings}>
-          {doctor.map((doctor, index) => {
+          {data?.map((doctor, index) => {
             return (
               <div
                 key={index}
@@ -154,4 +143,11 @@ const Doctor = () => {
   );
 };
 
+export const getServerSideProps = (async () => {
+  // Fetch data from external API
+  const res = await fetch('https://medstar-backend.onrender.com/doctor')
+  const data: doctorData = await res.json()
+  // Pass data to the page via props
+  return { props: { data } }
+}) satisfies GetServerSideProps<{ data: doctorData }>
 export default Doctor;

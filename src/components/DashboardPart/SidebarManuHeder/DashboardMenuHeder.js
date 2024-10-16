@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import style from '../../../styles/Sass/Components/DashboardPart/_dashboardHeader.module.scss';
+import style from '@/styles/Sass/Components/DashboardPart/_dashboardHeader.module.scss';
 const DashboardMenuHeder = ({menuHeader}) => {
     return (
        <div className={`${style.menuHeder} flex justify-between items-center `}>

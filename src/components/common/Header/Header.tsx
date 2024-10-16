@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   AiOutlineMail,
   AiOutlineMenu,
@@ -11,19 +12,15 @@ import {
   AiOutlineSearch,
 } from "react-icons/ai";
 import { BsFillCartPlusFill } from "react-icons/bs";
-import { useDispatch, useSelector } from "react-redux";
-import { bindActionCreators } from "redux";
-import logo from "../../../assets/image/medstar.png";
-import { actionCreators, State } from "../../../State";
-import style from "../../../styles/Sass/common/Header/_header.module.scss";
+import logo from "@/public/image/medstar.png";
+import style from "@/styles/Sass/common/Header/_header.module.scss";
 import SimpleButton from "../../Custom/Button/SimpleButton";
 import useFirebase from "../../hooks/useFirebase";
 import Navbar from "./Navbar";
 import NavbarModel from "./NavbarModel";
-import defaultProfile from "/assets/image/default_profile.png";
-import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
+import defaultProfile from "@/public/image/default_profile.png";
+import { useAppSelector } from "../../../redux/hooks";
 const Header = () => {
-  const [open, setOpen] = useState(false);
   const { user }: any = useFirebase();
   // const [isAdmin, setIsAdmin] = useState(false);
   const [searchValue, setSearchValue] = useState<string>("");
@@ -61,7 +58,7 @@ const {products}=useAppSelector(state=>state.cartR)
           </div>
         </div>
         <div className={style.middleHeader}>
-          {open && <NavbarModel />}
+          { <NavbarModel />}
           <div
             className={`${style.middle_header_body} flex items-center justify-between lg:justify-evenly md:justify-evenly py-2 `}
           >
