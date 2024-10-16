@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -5,21 +6,19 @@ import { JSXElementConstructor, Key, ReactElement, ReactNode, useEffect, useStat
 import { AiOutlineMail } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
 import { MdAddIcCall } from "react-icons/md";
-import Footer from "../../components/common/Footer";
-import Header from "../../components/common/Header/Header";
-import Meta from "../../components/common/Meta";
-import CustomModel from "../../components/common/Model/CustomModel";
-import ProgressModel from "../../components/common/Model/ProgressModel";
-import LargestButton from "../../components/Custom/Button/LargestButton";
-import useFirebase from "../../components/hooks/useFirebase";
-import CostInformation from "../../components/Order/CostInformation/CostInformation";
-import { InputFiledInformation } from "../../components/Order/CustomerInformation/InputFieldFinformation.js";
-import { PaymentMethodInfo } from "../../components/Order/Payment/PaymentMethodInfo.ts";
-import style from "../../styles/Sass/pages/Shipping.module.scss";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { TOrder } from "../../Type/type";
-import { add_new_order } from "../../redux/feature/OrderSlice";
-import { clearCart } from "../../redux/feature/CartSlice";
+import Meta from "@/components/common/Meta";
+import CustomModel from "@/components/common/Model/CustomModel";
+import ProgressModel from "@/components/common/Model/ProgressModel";
+import LargestButton from "@/components/Custom/Button/LargestButton";
+import useFirebase from "@/components/hooks/useFirebase";
+import CostInformation from "@/components/Order/CostInformation/CostInformation";
+import { InputFiledInformation } from "@/components/Order/CustomerInformation/InputFieldFinformation.js";
+import { PaymentMethodInfo } from "@/components/Order/Payment/PaymentMethodInfo";
+import style from "@/styles/Sass/pages/Shipping.module.scss";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { TOrder } from "@/Type/type";
+import { add_new_order } from "@/redux/feature/OrderSlice";
+import { clearCart } from "@/redux/feature/CartSlice";
 import { FormProps, useForm } from "react-hook-form";
 
 interface Data {
@@ -43,14 +42,11 @@ type TShippingAddress= {
   lastName: string;
 }
 const Shipping = () => {
-  const [orderProduct, setCardProducts] = useState<Data[]>([]);
-  const [customerData, setOrderInfoData] = useState<TShippingAddress|any>(null);
-  const [paymentType, setPaymentType] = useState<any>(null);
+  const [paymentType, setPaymentType] = useState(null);
   const [model, setModel] = useState(false);
   const [modelData, setModelData] = useState({});
+  const [customerData, setOrderInfoData] = useState<TShippingAddress|any>(null);
   const { user }: any = useFirebase();
-  const [customer, setCustomer] = useState<any>({});
-  const route = useRouter();
   const [progress, setProgress] = useState(false);
   const router=useRouter()
   const {register, handleSubmit}=useForm()
@@ -64,13 +60,9 @@ const dispatch=useAppDispatch()
     // setPaymentType(e.target.value);
    setPaymentType(e.target.value)
   };
-  const HandleFieldValue = (e: any) => {
-    const data = { ...customerData, [e.target.name]: e.target.value };
-    setOrderInfoData(data);
-  };
+
   const HandleFormSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    console.log(customerData);
   };
 
   const onSubmit= async(data:any)=>{
@@ -152,7 +144,6 @@ const dispatch=useAppDispatch()
         name="viewport"
         description="initial-scale=1.0, width=device-width"
       />
-      <Header />
 
       <div className={`${style.shipping}`}>
         {model && (
@@ -317,7 +308,6 @@ const dispatch=useAppDispatch()
           </aside>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

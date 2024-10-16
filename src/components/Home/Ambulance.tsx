@@ -1,12 +1,12 @@
+'use client'
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { GrLocation } from "react-icons/gr";
 import { IoIosCall } from "react-icons/io";
 import { TiLocation } from "react-icons/ti";
-import ambulanceImage from "../../assets/image/ambulance-dir.png";
+import ambulanceImage from "@/public/image/ambulance-dir.png";
 import style from "../../styles/Sass/Components/Home/Ambulance.module.scss";
-import MapModel from "../common/Model/MapModel";
-import SimpleButton from "../Custom/Button/SimpleButton";
+
 interface ambulanceData {
   id: number;
   name: string;
