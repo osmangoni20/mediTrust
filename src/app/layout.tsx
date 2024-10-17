@@ -4,7 +4,8 @@ import "./globals.css";
 import Header from "@/components/common/Header/Header";
 import Footer from "@/components/common/Footer";
 import { Provider } from "react-redux";
-import { store } from "@/redux/store";
+import { persistor, store } from "@/redux/store";
+import { PersistGate } from "redux-persist/integration/react";
 
 
 const geistSans = localFont({
@@ -34,9 +35,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
          <Provider store={store}>
+         <PersistGate persistor={persistor}>
          <Header/>
         {children}
         <Footer/>
+        </PersistGate>
         </Provider>
         
       </body>
