@@ -1,3 +1,4 @@
+"use client"
 import Head from "next/head";
 import Meta from "@/components/common/Meta";
 import Ambulance from "@/components/Home/Ambulance";
@@ -18,7 +19,7 @@ export default function Home() {
         description="initial-scale=1.0, width=device-width"
       />
     </Head>
-    <BannerAndDoctorAdd/>
+    {/* <BannerAndDoctorAdd/> */}
     {/* <PatientService/>
     <Features/>
     <Prescription/>

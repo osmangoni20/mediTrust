@@ -3,9 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/common/Header/Header";
 import Footer from "@/components/common/Footer";
-import { Provider } from "react-redux";
-import { persistor, store } from "@/redux/store";
-import { PersistGate } from "redux-persist/integration/react";
 
 
 const geistSans = localFont({
@@ -32,15 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}`}
       >
-         <Provider store={store}>
-         <PersistGate persistor={persistor}>
-         <Header/>
+      <Header/>
+         {/* <Header/> */}
         {children}
         <Footer/>
-        </PersistGate>
-        </Provider>
         
       </body>
     </html>
