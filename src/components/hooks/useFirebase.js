@@ -1,21 +1,21 @@
+'use client'
+
 import {
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
   sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, updateProfile
 } from "firebase/auth";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import FirebaseAuthentication from "../Authentication/firebase/firebase.initialize";
-  
-const useFirebase=()=>{
+import { redirect } from 'next/navigation'
+const UseFirebase=()=>{
     FirebaseAuthentication();
 
     const [user,setUser]=useState({});
     const [newUser,setNewUser]=useState({});
     const [error,setError]=useState('');
     const auth = getAuth();
-    const route=useRouter();
     const SignUpWithEmailAndPassword = (userData) => {
         const email = userData.email;
         const password = userData.password;
@@ -42,9 +42,10 @@ const useFirebase=()=>{
             }).then(res=>res.json())
             .then(data=>{
               if(data.insertedId){
-                alert("Your Account is successfully Created. Please Verified your Email")
-                route.push('/login');
                 Logout();
+                alert("Your Account is successfully Created. Please Verified your Email")
+                redirect('/login');
+                
               }
             });
           })
@@ -185,4 +186,4 @@ const useFirebase=()=>{
      }
       
 }
-export default useFirebase;
+export default UseFirebase;

@@ -19,12 +19,12 @@ export default function Home() {
       />
     </Head>
     <BannerAndDoctorAdd/>
-    <PatientService/>
+    {/* <PatientService/>
     <Features/>
     <Prescription/>
     <Ambulance/>
-    <Doctor/>
-    <Medicine/>
+    <Doctor data={[]}/>
+    <Medicine data={[]}/> */}
   </div>
   );
 }

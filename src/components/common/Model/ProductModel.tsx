@@ -7,7 +7,7 @@ import { bindActionCreators } from "redux";
 import { actionCreators, State } from "../../../State";
 import style from "@/styles/Sass/common/model/dynamicModel.module.scss";
 import SimpleButton from "../../Custom/Button/SimpleButton";
-import useFirebase from "../../hooks/useFirebase";
+import UseFirebase from "../../hooks/UseFirebase";
 import CustomModel from "./CustomModel";
 import { useAppDispatch } from "../../../redux/hooks";
 import { addToCart, deleteProduct, updateProduct } from "../../../redux/feature/CartSlice";

@@ -5,10 +5,10 @@ import { bindActionCreators } from "redux";
 import { actionCreators } from "../../../State";
 import style from "@/styles/Sass/Components/DashboardPart/_dashboardHeader.module.scss";
 import SimpleButton from "../../Custom/Button/SimpleButton";
-import useFirebase from "../../hooks/useFirebase";
+import UseFirebase from "../../hooks/UseFirebase";
 import logo from "@/public/image/medstar.png";
 const DashboardHeader = () => {
-  const { user, Logout }: any = useFirebase();
+  const { user, Logout }: any = UseFirebase();
   const dispatch = useDispatch();
   const { ResetOrderCart } = bindActionCreators(actionCreators, dispatch);
 

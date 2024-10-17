@@ -1,8 +1,10 @@
+'use client'
+
 import Image from "next/image";
 import { useState } from "react";
 import style from "../../styles/Sass/common/_product.module.scss";
 import SimpleButton from "../Custom/Button/SimpleButton";
-import useFirebase from "../hooks/useFirebase";
+import UseFirebase from "../hooks/UseFirebase";
 import ProductModel from "./Model/ProductModel";
 interface Data {
   id: number;
@@ -20,7 +22,7 @@ interface Data {
 }
 const Product = ({ product }: { product: Data }) => {
   const [showModel, setModel] = useState<boolean>(false);
-  const { user }: any = useFirebase();
+  const { user }: any = UseFirebase();
   return (
     <div>
       {showModel && (

@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import style from "@/styles/Sass/Components/Home/doctorCarousel.module.scss";
 import SimpleButton from "../Custom/Button/SimpleButton";
-import useFirebase from "../hooks/useFirebase";
+import UseFirebase from "../hooks/UseFirebase";
 import { GetServerSideProps } from "next";
 
 interface doctorData {
@@ -51,7 +51,7 @@ function SamplePrevArrow(props: any) {
   );
 }
 const Doctor = ({data}:{data:doctorData[]}) => {
-  const { user }: any = useFirebase();
+  const { user }: any = UseFirebase();
 
   const settings = {
     dots: true,

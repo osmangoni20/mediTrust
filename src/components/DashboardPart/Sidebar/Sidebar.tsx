@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import style from "@/styles/Sass/Components/DashboardPart/_sidebar.module.scss";
-import useFirebase from "../../hooks/useFirebase";
+import UseFirebase from "../../hooks/UseFirebase";
 import { adminSidebarMenu, userSidebarMenu } from "./SidebarData";
 import SubMenu from "./SubMenu";
 import activePerson from "@/public/image/default_profile.png";
 const Sidebar = () => {
-  const { user }: any = useFirebase();
+  const { user }: any = UseFirebase();
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {

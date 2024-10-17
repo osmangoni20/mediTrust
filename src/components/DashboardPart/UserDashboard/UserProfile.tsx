@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import profileStyle from "@/styles/Sass/Components/DashboardPart/Dashboard/UserDashboard/userProfile.module.scss";
-import useFirebase from "../../hooks/useFirebase";
+import UseFirebase from "../../hooks/UseFirebase";
 import cameraImage from "@/public/image/camera.png";
 import profileImage from "@/public/image/personlogo.jpg";
 const field = [
@@ -63,7 +63,7 @@ const UserProfile = () => {
   const [modelData, setModelData] = useState<any>({});
   const [uploadImage, setUploadImage] = useState<any>();
   const [progress, setProgress] = useState(false);
-  const { user, UpdateUserData }: any = useFirebase();
+  const { user, UpdateUserData }: any = UseFirebase();
   const route = useRouter();
   useEffect(() => {
     async function fetchData() {

@@ -10,7 +10,7 @@ import Meta from "@/components/common/Meta";
 import CustomModel from "@/components/common/Model/CustomModel";
 import ProgressModel from "@/components/common/Model/ProgressModel";
 import LargestButton from "@/components/Custom/Button/LargestButton";
-import useFirebase from "@/components/hooks/useFirebase";
+import UseFirebase from "@/components/hooks/UseFirebase";
 import CostInformation from "@/components/Order/CostInformation/CostInformation";
 import { InputFiledInformation } from "@/components/Order/CustomerInformation/InputFieldFinformation.js";
 import { PaymentMethodInfo } from "@/components/Order/Payment/PaymentMethodInfo";
@@ -46,7 +46,7 @@ const Shipping = () => {
   const [model, setModel] = useState(false);
   const [modelData, setModelData] = useState({});
   const [customerData, setOrderInfoData] = useState<TShippingAddress|any>(null);
-  const { user }: any = useFirebase();
+  const { user }: any = UseFirebase();
   const [progress, setProgress] = useState(false);
   const router=useRouter()
   const {register, handleSubmit}=useForm()

@@ -12,7 +12,7 @@ import { MdAddIcCall } from "react-icons/md";
 import modelStyle from "@/styles/Sass/common/model/_doctorModel.module.scss";
 import style from "@/styles/Sass/pages/Shipping.module.scss";
 import SimpleButton from "../../Custom/Button/SimpleButton";
-import useFirebase from "../../hooks/useFirebase";
+import UseFirebase from "../../hooks/UseFirebase";
 import {
   AppointmentModelInputField,
   PrescriptionInputFieldData,
@@ -42,7 +42,7 @@ const InputFieldModel = ({
 
   const [progress, setProgress] = useState(false);
   const [newDate, setDate] = useState("");
-  const { user }: { user: any } = useFirebase();
+  const { user }: { user: any } = UseFirebase();
   const route = useRouter();
 
   // Image Upload

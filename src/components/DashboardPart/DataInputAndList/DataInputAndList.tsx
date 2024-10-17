@@ -37,7 +37,7 @@ import DashboardInfoModel from "../../common/Model/DashboardInfoModel";
 import NoticeModel from "../../common/Model/NoticeModel";
 import OrderInfoModel from "../../common/Model/OrderInfoModel";
 import ProgressModel from "../../common/Model/ProgressModel";
-import useFirebase from "../../hooks/useFirebase";
+import UseFirebase from "../../hooks/UseFirebase";
 import OrderView from "../Admin Dashboard/OrderView";
 import ListView from "../UserDashboard/ListView";
 import MyOrder from "../UserDashboard/MyOrder";

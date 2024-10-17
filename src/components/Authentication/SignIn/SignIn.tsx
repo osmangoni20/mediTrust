@@ -7,7 +7,7 @@ import { MdMarkEmailUnread } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import style from "@/styles/Sass/pages/auth/login&signIn.module.scss";
 import Meta from "../../common/Meta";
-import useFirebase from "../../hooks/useFirebase";
+import UseFirebase from "../../hooks/UseFirebase";
 const InputFiledInfo = [
   {
     name: "firstName",
@@ -57,7 +57,7 @@ type passwordErrorType = {
 };
 const SignIn = ({ setModel, setModelData }: any) => {
   const [signUpInputData, setSignUpInputData] = useState({});
-  const { SignUpWithEmailAndPassword, error, newUser }: any = useFirebase();
+  const { SignUpWithEmailAndPassword, error, newUser }: any = UseFirebase();
   const [progress, setProgress] = useState<boolean>(false);
   const [password, setPassword] = useState({
     firstPassword: "",

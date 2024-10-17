@@ -15,13 +15,13 @@ import { BsFillCartPlusFill } from "react-icons/bs";
 import logo from "@/public/image/medstar.png";
 import style from "@/styles/Sass/common/Header/_header.module.scss";
 import SimpleButton from "../../Custom/Button/SimpleButton";
-import useFirebase from "../../hooks/useFirebase";
+import UseFirebase from "../../hooks/UseFirebase";
 import Navbar from "./Navbar";
 import NavbarModel from "./NavbarModel";
 import defaultProfile from "@/public/image/default_profile.png";
 import { useAppSelector } from "../../../redux/hooks";
 const Header = () => {
-  const { user }: any = useFirebase();
+  const { user }: any = UseFirebase();
   // const [isAdmin, setIsAdmin] = useState(false);
   const [searchValue, setSearchValue] = useState<string>("");
 const {products}=useAppSelector(state=>state.cartR)
