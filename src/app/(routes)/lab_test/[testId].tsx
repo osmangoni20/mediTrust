@@ -1,17 +1,19 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
 import { MdAddIcCall } from "react-icons/md";
-import Footer from "../../components/common/Footer";
-import Header from "../../components/common/Header/Header";
-import Meta from "../../components/common/Meta";
-import CustomModel from "../../components/common/Model/CustomModel";
-import ProgressModel from "../../components/common/Model/ProgressModel";
-import LargestButton from "../../components/Custom/Button/LargestButton";
-import useFirebase from "../../components/hooks/useFirebase";
-import { InputFiledInformation } from "../../components/Order/CustomerInformation/InputFieldFinformation";
-import style from "../../styles/Sass/pages/Shipping.module.scss";
+import Footer from "@/components/common/Footer";
+import Header from "@/components/common/Header/Header";
+import Meta from "@/components/common/Meta";
+import CustomModel from "@/components/common/Model/CustomModel";
+import ProgressModel from "@/components/common/Model/ProgressModel";
+import LargestButton from "@/components/Custom/Button/LargestButton";
+import useFirebase from "@/components/hooks/UseFirebase";
+import { InputFiledInformation } from "@/components/Order/CustomerInformation/InputFieldFinformation";
+import style from "@/styles/Sass/pages/Shipping.module.scss";
 const SingleTest = ({ data }: { data: any }) => {
   const [labTestInfo, setLabTestInfo] = useState<any>([]);
   const [patient, setPatient] = useState<any>({});
@@ -19,7 +21,6 @@ const SingleTest = ({ data }: { data: any }) => {
   const [model, setSuccessModel] = useState(false);
   const [modelData, setModelData] = useState({});
   const [progress, setProgress] = useState(false);
-  const route = useRouter();
 
   useEffect(() => {
     setLabTestInfo(data);

@@ -1,11 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+'use client';
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FiType } from "react-icons/fi";
-import Footer from "../../components/common/Footer";
-import Header from "../../components/common/Header/Header";
-import Meta from "../../components/common/Meta";
-import SimpleButton from "../../components/Custom/Button/SimpleButton";
-import style from "../../styles/Sass/pages/labTest/_labTest.module.scss";
+import Footer from "@/components/common/Footer";
+import Header from "@/components/common/Header/Header";
+import Meta from "@/components/common/Meta";
+import SimpleButton from "@/components/Custom/Button/SimpleButton";
+import style from "@/styles/Sass/pages/labTest/_labTest.module.scss";
 
 
 const LabTest = ({ labTestData }: any) => {

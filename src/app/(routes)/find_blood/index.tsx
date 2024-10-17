@@ -1,11 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+'use client';
 import Image from "next/image";
 import { useState } from "react";
 import { FaCity } from "react-icons/fa";
 import { MdBloodtype } from "react-icons/md";
-import Header from "../../components/common/Header/Header";
-import Meta from "../../components/common/Meta";
-import SimpleButton from "../../components/Custom/Button/SimpleButton";
-import style from "../../styles/Sass/pages/findBlood/_findBlood.module.scss";
+import Header from "@/components/common/Header/Header";
+import Meta from "@/components/common/Meta";
+import SimpleButton from "@/components/Custom/Button/SimpleButton";
+import style from "@/public/styles/Sass/pages/findBlood/_findBlood.module.scss";
 import demoImag from "@/public/image/personlogo.jpg";
 interface Data {
   id: number;
