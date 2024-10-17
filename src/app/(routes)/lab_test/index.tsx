@@ -99,7 +99,7 @@ const LabTest = ({ labTestData }: any) => {
                     </td>
                     <td className={`${style.testName}`}>
                       <Link href={`/lab_test/${item._id}`}>
-                        <a>{item.testName}</a>
+                        <li>{item.testName}</li>
                       </Link>
                     </td>
 

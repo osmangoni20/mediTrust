@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import style from '../@/styles/Sass/Components/Order/PaymentMethod.module.scss';
+import Link from 'next/link';
 const PaymentMethodInfo = [
     {
         id: "1",
@@ -88,7 +89,7 @@ const PaymentMethod = ({ OrderInfoData, setOrderInfoData }) => {
                         PaymentMethodInfo.map(method,index => 
                         {
                             <div key={index} className={`${style.paymentMethod}`}>
-                            <a href={method.paymentTypeLink}>
+                            <Link href={method.paymentTypeLink}>
                               <div className={`$${style.PaymentType}  flex justify-between align-center`} >
                                 <input onClick={HandlePaymentType} type="radio" id={method.id} name="DelevaryType" value={method.paymentType} />
                                 <label htmlFor={method.id} >
@@ -96,7 +97,7 @@ const PaymentMethod = ({ OrderInfoData, setOrderInfoData }) => {
                                 </label>
                       
                               </div>
-                            </a>
+                            </Link>
                           </div>
                         }
                     )

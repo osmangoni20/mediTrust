@@ -68,7 +68,7 @@ const SubMenu = ({ item }: any) => {
             <span className="pl-1">{item.name}</span>
           ) : (
             <Link href={item.link} passHref>
-              <a className="pl-1">{item.name}</a>
+              <li className="pl-1">{item.name}</li>
             </Link>
           )}
         </div>
@@ -151,7 +151,7 @@ const SubMenu = ({ item }: any) => {
                 className="block hover:bg-gray-200 hover:text-black p-0 text-lg text-gray hover:#261e1e dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
               >
                 <Link href={item.link} passHref>
-                  <a className="block px-10 pr-1"> {item.name}</a>
+                  <li className="block px-10 pr-1"> {item.name}</li>
                 </Link>
 
                 {item.countNumber && (

@@ -30,9 +30,9 @@ const DashboardHeader = () => {
         </div>
         <div className="pr-3" onClick={HandleLogout}>
           <Link href={"/"}>
-            <a>
+         
               <SimpleButton>Logout</SimpleButton>
-            </a>
+          
           </Link>
         </div>
         {/* <div className="flex items-center userName">

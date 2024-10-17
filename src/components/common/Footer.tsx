@@ -58,33 +58,33 @@ const Footer = () => {
         <div className="leading-loose ">
           <span className="footer-title">Services</span>
           <Link href={"/doctor"}>
-            <a className="link link-hover">Doctor</a>
+            <li className="link link-hover">Doctor</li>
           </Link>
           <Link href={"/doctor"}>
-            <a className="link link-hover">Medicine</a>
+            <li className="link link-hover">Medicine</li>
           </Link>
           <Link href={"/doctor"}>
-            <a className="link link-hover">Ambulance</a>
+            <li className="link link-hover">Ambulance</li>
           </Link>
           <Link href={"/doctor"}>
-            <a className="link link-hover">Find Blood</a>
+            <li className="link link-hover">Find Blood</li>
           </Link>
         </div>
 
         <div className="leading-loose">
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
+          <Link href={"/about"} className="link link-hover">About us</Link>
+          <Link href={"/about"}className="link link-hover">Contact</a>
+          <Link href={"/about"}className="link link-hover">Jobs</a>
         </div>
         <div className="leading-loose">
           <span className="footer-title">Legal</span>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+          <Link href={"/about"} className="link link-hover">Terms of use</a>
+          <Link href={"/about"} className="link link-hover">Privacy policy</a>
+          <Link href={"/about"} className="link link-hover">Cookie policy</a>
         </div>
         <div className="leading-loose">
           <span className="footer-title">Apps</span>
-          <a className="link link-hover">Android</a>
+          <Link href={"/about"} className="link link-hover">Android</a>
         </div>
       </footer>
     </div>

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/common/Header/Header";
 import Footer from "@/components/common/Footer";
+import { StoreProvider } from "./redux/StoreProvider";
 
 
 const geistSans = localFont({
@@ -31,10 +32,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable}`}
       >
-      <Header/>
-         {/* <Header/> */}
+        <StoreProvider>
+        <Header/>
         {children}
         <Footer/>
+        </StoreProvider>
+      
         
       </body>
     </html>

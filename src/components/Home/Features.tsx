@@ -138,9 +138,9 @@ const Features = () => {
 
                   <div className="card-actions justify-center">
                     <Link href={`/${feature.link}`}>
-                      <a>
+                     
                         <SimpleButton>{feature.buttonName}</SimpleButton>
-                      </a>
+                   
                     </Link>
                   </div>
                 </div>

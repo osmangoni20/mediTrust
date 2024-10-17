@@ -128,9 +128,9 @@ const Doctor = ({data}:{data:doctorData[]}) => {
                   <p>{doctor.jobTitle}</p>
                   <div className="card-actions justify-center">
                     <Link href={ user.email?`/doctor/${doctor._id}`:'/login'} passHref>
-                      <a>
+                   
                         <SimpleButton>Appointment</SimpleButton>
-                      </a>
+                 
                     </Link>
                   </div>
                 </div>

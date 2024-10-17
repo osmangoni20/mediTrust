@@ -1,9 +1,10 @@
+'use client';
 /* eslint-disable @typescript-eslint/no-explicit-any */
-'use client'
+
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useState } from "react";
+import { useRouter } from 'next/navigation'
 import {
   AiOutlineMail,
   AiOutlineMenu,
@@ -19,7 +20,7 @@ import UseFirebase from "../../hooks/UseFirebase";
 import Navbar from "./Navbar";
 import NavbarModel from "./NavbarModel";
 import defaultProfile from "@/public/image/default_profile.png";
-import { useAppSelector } from "../../../redux/hooks";
+import { useAppSelector } from "@/app/redux/hooks";
 const Header = () => {
   const { user }: any = UseFirebase();
   // const [isAdmin, setIsAdmin] = useState(false);
@@ -70,9 +71,9 @@ const {products}=useAppSelector(state=>state.cartR)
 
               {/* <img className="branding" src={logo} alt=""></img> */}
               <Link href={"/"} passHref>
-                <a className={style.logo}>
+                <li className={style.logo}>
                   <Image src={logo} height={80} width={80} alt="Med Star" />
-                </a>
+                </li>
               </Link>
             </div>
 
@@ -96,14 +97,14 @@ const {products}=useAppSelector(state=>state.cartR)
               </li> */}
 
               <Link href={"/order_cart"} passHref>
-                <a>
+            
                   <li>
                     <BsFillCartPlusFill />
                     <span className={`${style.totalCartItem}`}>
                       {Number(products?.length)}
                     </span>
                   </li>
-                </a>
+              
               </Link>
               {/* <li>
                 <AiOutlineUser />
@@ -112,21 +113,21 @@ const {products}=useAppSelector(state=>state.cartR)
                 {user.email ? (
                   <div className={style.profileLogo}>
                     <Link href={"/dashboard"}>
-                      <a>
+                     
                         <Image
                           src={user?.photoURL || defaultProfile}
                           alt={""}
                           height={40}
                           width={40}
                         />
-                      </a>
+                  
                     </Link>
                   </div>
                 ) : (
                   <Link href={"/login"} passHref>
-                    <a className={style.loginButton}>
+                    <li className={style.loginButton}>
                       <SimpleButton>Log In</SimpleButton>
-                    </a>
+                    </li>
                   </Link>
                 )}
               </span>

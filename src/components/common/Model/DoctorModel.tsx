@@ -57,9 +57,9 @@ const DoctorModel = ({
                       <h3>{data.name}</h3>
                       <div className="mt-5 flex justify-evenly items-center gap-5">
                         <Link href={`/doctorAppointment/${data._id}`} passHref>
-                          <a>
+                         
                             <SimpleButton>Chamber</SimpleButton>
-                          </a>
+                       
                         </Link>
 
                         <SimpleButton>Video Call</SimpleButton>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Links = [
   { name: "Baby & Mom", link: "/" },
   { name: "Personal Care", link: "/about" },
@@ -39,12 +41,12 @@ const NavbarModel = () => {
             >
               {Links.map((link) => (
                 <li key={link.name} className="md:ml-8 text-base md:my-0 py-2">
-                  <a
+                  <Link
                     href={link.link}
                     className="text-black font-bold text-sm  duration-500"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                   <hr />
                 </li>
               ))}

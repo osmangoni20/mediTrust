@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+'use client';
+
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { TMedicine } from '../../Type/type'
+import { TMedicine } from '@/Type/type'
 import { WritableDraft } from 'immer'
 
 

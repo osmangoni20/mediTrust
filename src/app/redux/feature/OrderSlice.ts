@@ -1,6 +1,6 @@
-
+'use client';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { TMedicine } from "../../Type/type";
+import { TMedicine } from "@/Type/type";
 
 type TInitialState={
     date:string;

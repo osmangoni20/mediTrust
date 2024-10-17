@@ -52,7 +52,7 @@ const SingleModel = ({
                     <tr key={item._key} onClick={() => setModel(false)}>
                       <td className={`${style.testName}`}>
                         <Link href={`/lab_test/${item._id}`}>
-                          <a>{item.testName}</a>
+                         {item.testName}
                         </Link>
                       </td>
 

@@ -15,7 +15,7 @@ const NewNotice = () => {
   useEffect(() => {
     setNewNotice(newNotice);
   }, []);
-  const HandleClick = (notice: SetStateAction<{}>) => {
+  const HandleClick = (notice: SetStateAction<object>) => {
     setShowModal(true);
     setSingleNotice(notice);
   };
@@ -65,6 +65,7 @@ const NewNotice = () => {
               // {/* </Link> */}
               // <Link to={`/allNotice/${notice.id}`}>
               <li
+              key={index}
                 onClick={() => HandleClick(notice)}
                 className={`${style.singleNotice} bg-white`}
               >
