@@ -1,10 +1,11 @@
+"use client";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Categories from "../../components/common/Categories";
-import Header from "../../components/common/Header/Header";
-import Meta from "../../components/common/Meta";
-import Product from "../../components/common/Product";
-import style from "../../styles/Sass/pages/medicine/_medicine.module.scss";
+import Categories from "@/components/common/Categories";
+import Header from "@/components/common/Header/Header";
+import Meta from "@/components/common/Meta";
+import Product from "@/components/common/Product";
+import style from "@/styles/Sass/pages/medicine/_medicine.module.scss";
 
 
 const capitalizeFirstLetter = (

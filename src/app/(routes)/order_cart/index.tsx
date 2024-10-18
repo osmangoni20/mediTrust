@@ -1,18 +1,18 @@
+"use client"
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Footer from "../../components/common/Footer";
-import Header from "../../components/common/Header/Header";
-import Meta from "../../components/common/Meta";
-import ProgressModel from "../../components/common/Model/ProgressModel";
-import useFirebase from "../../components/hooks/useFirebase";
-import CostInformation from "../../components/Order/CostInformation/CostInformation";
-import CardProduct from "../../components/OrderCarts/CardProduct/CardProduct";
-import style from "../../styles/Sass/Components/OrderCart/_order_cart.module.scss";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import Footer from "@/components/common/Footer";
+import Header from "@/components/common/Header/Header";
+import Meta from "@/components/common/Meta";
+import ProgressModel from "@/components/common/Model/ProgressModel";
+import useFirebase from "@/components/hooks/useFirebase";
+import CostInformation from "@/components/Order/CostInformation/CostInformation";
+import CardProduct from "@/components/OrderCarts/CardProduct/CardProduct";
+import style from "@/styles/Sass/Components/OrderCart/_order_cart.module.scss";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 const OrderCart = () => {
   const [cardProducts, setCardProducts] = useState([]);
   const [deleteItem, setDeleteItem] = useState(false);
-  const [updateQuantity, setUpdateQuantity] = useState(false);
   const [progress, setProgress] = useState(false);
   const route = useRouter();
   const { user }: any = useFirebase();

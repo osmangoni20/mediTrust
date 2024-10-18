@@ -1,14 +1,9 @@
 import Link from "next/link";
 
 const Links = [
-  { name: "Baby & Mom", link: "/" },
-  { name: "Personal Care", link: "/about" },
-  { name: "Female Hygiene", link: "/" },
-  { name: "Baby & Mom", link: "/" },
-  { name: "Personal Care", link: "/about" },
-  { name: "Female Hygiene", link: "/" },
-  { name: "Personal Care", link: "/about" },
-  { name: "Female Hygiene", link: "/" },
+  { name: "Baby & Mom", link: "/baby_mom" },
+  { name: "Personal Care", link: "/personal_care" },
+  { name: "Female Hygiene", link: "/female_hygiene" },
 ];
 
 const NavbarModel = () => {

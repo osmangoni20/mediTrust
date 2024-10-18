@@ -1,6 +1,6 @@
 import React from 'react';
 import DataInput from '../DataInputAndList/DataInputAndList';
-import '../Style/inputStyle.css';
+import '@/Style/inputStyle.css';
 const NoticeBoard = () => {
     
 

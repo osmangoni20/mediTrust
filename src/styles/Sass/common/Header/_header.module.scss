@@ -43,13 +43,11 @@
         }
       }
 
-      img {
-        border-radius: 50px;
-        margin-top: 4px;
-      }
+     
       .profileLogo {
         height: 45px;
         width: 45px;
+        padding: 0px;
         margin: 5px 0px;
         border: 2px solid $primary;
         margin-left: 30px;
@@ -137,7 +135,7 @@
 @media (max-width: 768px) {
   .middle_header_body {
     padding: 0px 5px;
-    img {
+    Image {
       margin-top: 0px !important;
     }
     .iconList {

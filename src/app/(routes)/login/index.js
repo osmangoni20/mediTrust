@@ -1,3 +1,4 @@
+'use client';
 import { getAuth } from "firebase/auth";
 import dynamic from 'next/dynamic';
 import Image from "next/image";
@@ -8,13 +9,13 @@ import { FaUserAlt } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
 import loginImage from "@/public/image/loginImage.svg";
 import siteLogo from '@/public/image/siteLogo.png';
-import SignIn from '../../components/Authentication/SignIn/SignIn.tsx';
-import Header from "../../components/common/Header/Header";
-import Meta from "../../components/common/Meta";
-import ProgressModel from "../../components/common/Model/ProgressModel";
-import useFirebase from "../../components/hooks/useFirebase";
-import style from "../../styles/Sass/pages/auth/login&signIn.module.scss";
-const CustomModel=dynamic(()=>import('../../components/common/Model/CustomModel'));
+import SignIn from '@/components/Authentication/SignIn/SignIn.tsx';
+import Header from "@/components/common/Header/Header";
+import Meta from "@/components/common/Meta";
+import ProgressModel from "@/components/common/Model/ProgressModel";
+import useFirebase from "@/components/hooks/useFirebase";
+import style from "@/styles/Sass/pages/auth/login&signIn.module.scss";
+const CustomModel=dynamic(()=>import('@/components/common/Model/CustomModel'));
 const Login = () => {
   const {
     register,
@@ -25,7 +26,6 @@ const Login = () => {
 
   const { SignInWithEmailPassword,EmailVerification, ResetPassword, error,user } = useFirebase();
   const [resetPassword, setResetPassword] = useState(false);
-  const router = useRouter();
   const [model, setModel] = useState(false);
   const [modelData, setModelData] = useState({});
   const [loginFrom,setLoginFrom]=useState(true);

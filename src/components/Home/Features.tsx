@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BsStar } from "react-icons/bs";
-import style from "../../styles/Sass/Components/Home/Features.module.scss";
+import style from "@/styles/Sass/Components/Home/Features.module.scss";
 import SimpleButton from "../Custom/Button/SimpleButton";
 const featuresList = [
   {

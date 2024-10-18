@@ -1,6 +1,7 @@
+"use client"
 import Image from "next/image";
 import { useState } from "react";
-import style from "../../styles/Sass/pages/doctor/_doctor.module.scss";
+import style from "@/styles/Sass/pages/doctor/_doctor.module.scss";
 import SimpleButton from "../Custom/Button/SimpleButton";
 import CustomModel from "./Model/CustomModel";
 import DoctorModel from "./Model/DoctorModel";

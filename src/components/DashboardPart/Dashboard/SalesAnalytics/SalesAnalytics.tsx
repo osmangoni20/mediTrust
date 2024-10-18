@@ -1,7 +1,7 @@
 import { FaUserAlt } from "react-icons/fa";
 import { HiCurrencyBangladeshi } from "react-icons/hi";
 import { IoLogoDesignernews } from "react-icons/io";
-import style from "../@/styles/Sass/Components/DashboardPart/Dashboard/_salesAnalytics.module.scss";
+import style from "@/styles/Sass/Components/DashboardPart/Dashboard/_salesAnalytics.module.scss";
 
 interface SalesAnalytics {
   offline: number;
