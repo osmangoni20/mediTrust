@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
-import style from "../@/styles/Sass/Components/DashboardPart/Dashboard/_recentMessage.module.scss";
+import style from "@/styles/Sass/Components/DashboardPart/Dashboard/_recentMessage.module.scss";
 import doc from "@/public/image/2doctor.png";
 
 interface Message {
@@ -9,8 +10,7 @@ interface Message {
   seen: boolean;
   message: string;
   date: string;
-}
-[];
+}[];
 
 const RecentMessage = ({ messageData }: any) => {
   return (

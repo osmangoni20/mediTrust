@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import style from "../../styles/Sass/common/_product.module.scss";
+import style from "@/styles/Sass/common/_product.module.scss";
 import SimpleButton from "../Custom/Button/SimpleButton";
 import UseFirebase from "../hooks/UseFirebase";
 import ProductModel from "./Model/ProductModel";

@@ -1,93 +1,137 @@
 import Link from "next/link";
+import React from "react";
+
+
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer md:place-items-start place-items-center p-10 bg-neutral text-neutral-content">
-        <div className="flex justify-center items-center text-center leading-9">
-          <div>
-            {/* <figure style={{ width: "100px" }}>
-              <Image src={logo} alt={""} />
-            </figure> */}
+ 
+  <footer className="px-10 lg:grid sm:grid-cols-1 md:flex md:flex-wrap md:justify-between 
+  lg:grid-cols-5    p-6 bg-[#514F4D] text-white">
+      {/* Company Info */}
+      <nav className="mb-6 lg:mb-0 md:min-w-full ">
+        <h6 className="uppercase text-[#FFFFF4] font-montserrat font-semibold">
+          Medi Trust
+        </h6>
+        <p>Medi Trust Bangladesh Limited. Providing reliable Medical Service since 2023</p>
+        <ul className="md:mt-4 text-gray-200">
+        <li className="flex items-center gap-2 mb-2">
+            <p className="text-sm font-bold font-montserrat">Address: </p>
+            <p className="text-sm lg:text-base text-gray-200">
+              House 10, Road 12, Academy Road, Feni Sodor, Chittagong,
+              Bangladesh
+            </p>
+          </li>
+          <li className="flex items-center justify-start gap-2">
+           <p className="text-sm font-bold font-montserrat">Hotline:</p>
 
-            <h2 className="font-bold text-white">
-              MedStar <br />
-            </h2>
-            <p> Providing reliable Medical Service since 2023</p>
-            <p>Copyright © 2022 - All right reserved</p>
+            <p className="text-sm lg:text-base text-gray-200">7722</p>
+          </li>
+          <li className="flex items-center  gap-2 mb-2">
+            <p className="text-sm font-bold font-montserrat">Phone: </p>
 
-            <div className="flex justify-center">
-              <div className="grid grid-flow-col gap-4">
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="fill-current"
-                  >
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-                  </svg>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="fill-current"
-                  >
-                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                  </svg>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="fill-current"
-                  >
-                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                  </svg>
-                </li>
-              </div>
-            </div>
-          </div>
-        </div>
+            <p className="text-sm lg:text-base text-gray-200">+8801878473789</p>
+          </li>
+          <li className="flex items-center justify-start gap-2">
+           <p className="text-sm font-bold font-montserrat">Email:</p>
 
-        <div className="leading-loose ">
-          <span className="footer-title">Services</span>
-          <Link href={"/doctor"}>
-            <li className="link link-hover">Doctor</li>
+            <p className="text-sm lg:text-base text-gray-300">meditrust@gmail.com</p>
+          </li>
+          
+        </ul>
+      </nav>
+      {/* SErvice */}
+      <nav className="mb-6 lg:mb-0 lg:mx-auto text-gray-200">
+      <h6 className="footer-title text-white">Service</h6>
+      <Link href="/doctor" className="link link-hover block mb-2">
+            Doctor
           </Link>
-          <Link href={"/doctor"}>
-            <li className="link link-hover">Medicine</li>
+          <Link href="/medicine" className="link link-hover block mb-2">
+           Medicine
           </Link>
-          <Link href={"/doctor"}>
-            <li className="link link-hover">Ambulance</li>
+          <Link href="/ambulance" className="link link-hover block mb-2">
+           Ambulance
           </Link>
-          <Link href={"/doctor"}>
-            <li className="link link-hover">Find Blood</li>
+          <Link href="/blood" className="link link-hover block mb-2">
+           Find Blood
           </Link>
-        </div>
+         </nav>
+      {/* Company Links */}
+      <nav className="mb-6 lg:mb-0 lg:mx-auto text-gray-200">
+        <h6 className="footer-title text-white">Company</h6>
+        <Link href="/about" className="link link-hover block mb-2">
+          About Us
+        </Link>
+        <Link href="/contact" className="link link-hover block mb-2">
+          Contact
+        </Link>
+        <Link href="/privacy_policy" className="link link-hover block mb-2">
+          Privacy Policy
+        </Link>
+        <Link href="/cookie_policy" className="link link-hover block mb-2">
+          Cookie Policy
+        </Link>
+        <Link href="/terms_condition" className="link link-hover block mb-2">
+          Terms & Conditions
+        </Link>
+      </nav>
 
-        <div className="leading-loose">
-          <Link href={"/about"} className="link link-hover">About us</Link>
-          <Link href={"/about"}className="link link-hover">Contact</Link>
-          <Link href={"/about"}className="link link-hover">Jobs</Link>
-        </div>
-        <div className="leading-loose">
-          <span className="footer-title">Legal</span>
-          <Link href={"/about"} className="link link-hover">Terms of use</Link>
-          <Link href={"/about"} className="link link-hover">Privacy policy</Link>
-          <Link href={"/about"} className="link link-hover">Cookie policy</Link>
-        </div>
-        <div className="leading-loose">
-          <span className="footer-title">Apps</span>
-          <Link href={"/about"} className="link link-hover">Android</Link>
-        </div>
-      </footer>
-    </div>
+      {/* Help Links */}
+      <nav className="mb-6 lg:mb-0 lg:mx-auto text-gray-200">
+        <h6 className="footer-title text-white">Help</h6>
+        <Link href="/payment_service" className="link link-hover block mb-2">
+          Payment
+        </Link>
+        <Link href="/shipping_service" className="link link-hover block mb-2">
+          Shipping
+        </Link>
+        <Link href="/return_replacement" className="link link-hover block mb-2">
+          Return and Replacement
+        </Link>
+        <Link href="/contact" className="link link-hover block mb-2">
+          Chat With Us
+        </Link>
+      </nav>
+
+      {/* Social Links */}
+      <nav className="mb-6 lg:mb-0 lg:mx-auto text-gray-200">
+        <h6 className="footer-title text-white">Social</h6>
+        <Link
+          target="_blank"
+          href="https://facebook.com"
+          className="link link-hover block mb-2"
+        >
+          Facebook
+        </Link>
+        <Link
+          target="_blank"
+          href="https://linkedin.com"
+          className="link link-hover block mb-2"
+        >
+          LinkedIn
+        </Link>
+        <Link
+          target="_blank"
+          href="https://youtube.com"
+          className="link link-hover block mb-2"
+        >
+          YouTube
+        </Link>
+        <Link
+          target="_blank"
+          href="https://instagram.com"
+          className="link link-hover block mb-2"
+        >
+          Instagram
+        </Link>
+        <Link
+          target="_blank"
+          href="https://twitter.com"
+          className="link link-hover block mb-2"
+        >
+          Twitter
+        </Link>
+      </nav>
+    </footer>
   );
 };
 

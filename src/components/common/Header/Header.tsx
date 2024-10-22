@@ -12,17 +12,17 @@ import {
   AiOutlinePhone,
   AiOutlineSearch,
 } from "react-icons/ai";
+import dynamic from "next/dynamic";
 import { BsFillCartPlusFill } from "react-icons/bs";
 import logo from "@/public/image/medstar.png";
 import style from "@/styles/Sass/common/Header/_header.module.scss";
 import SimpleButton from "../../Custom/Button/SimpleButton";
 import UseFirebase from "../../hooks/UseFirebase";
-import Navbar from "./Navbar";
+const Navbar=dynamic(()=>import('./Navbar'), { ssr: false })
 import NavbarModel from "./NavbarModel";
 import defaultProfile from "@/public/image/default_profile.png";
 import { useAppSelector } from "@/app/redux/hooks";
 const Header = () => {
-  const [open, setOpen] = useState(false);
   const { user }: any = UseFirebase();
   // const [isAdmin, setIsAdmin] = useState(false);
   const [searchValue, setSearchValue] = useState<string>("");
@@ -42,25 +42,33 @@ const {products}=useAppSelector(state=>state.cartR)
         >
           <div className="flex justify-between items-center">
             <ul className="list-none flex items-center gap-4">
-              <li className="flex items-center">
+            
+            <li className="flex items-center">
+              <Link href="tell:01878452545" className="flex gap-2 items-center">
                 <AiOutlinePhone />
-                <Link href="tell:01878452545">+88018784525</Link>
-              </li>
-              <li className="flex items-center">
-                <AiOutlineMail></AiOutlineMail>
-                <Link href="mail-to:support@ehostelbd.com">
-                  support@ehostelbd.com
+                +88018784525
                 </Link>
               </li>
+            
+           
+            <li className="flex items-center">
+              <Link href="mail-to:support@ehostelbd.com" className="flex gap-2 items-center">
+                <AiOutlineMail></AiOutlineMail>
+                support@ehostelbd.com
+                </Link>
+              </li>
+                
+                
+             
             </ul>
-            <div className="flex items-center">
+            <div className="flex items-center ">
               <AiOutlineMobile />
               <Link href="/medStart">Save on our app</Link>
             </div>
           </div>
         </div>
         <div className={style.middleHeader}>
-          {open && <NavbarModel />}
+          {/* {open && <NavbarModel />} */}
           <div
             className={`${style.middle_header_body} flex items-center justify-between lg:justify-evenly md:justify-evenly py-2 `}
           >
@@ -92,27 +100,31 @@ const {products}=useAppSelector(state=>state.cartR)
                 </button>
               </div>
             </label>
+            
+
             <ul className={` ${style.iconList}`}>
               {/* <li>
                 <BsBagCheck />
               </li> */}
 
-              <Link href={"/order_cart"} passHref>
+             
                 
                   <li>
+                  <Link href={"/order_cart"} passHref>
                     <BsFillCartPlusFill />
-                    <span className={`${style.totalCartItem}`}>
-                      {Number(products?.length)}
-                    </span>
+                    <button className={`${style.totalCartItem}`}>
+                      {products?.length||0}
+                    </button>
+                    </Link>
                   </li>
                 
-              </Link>
+            
               {/* <li>
                 <AiOutlineUser />
               </li> */}
               <span className="md:block lg:block ">
                 {user.email ? (
-                  <div className={style.profileLogo}>
+                  <li className={style.profileLogo}>
                     <Link href={"/dashboard"}>
                      
                        <figure className="w-[45px] h-[45px]">
@@ -126,38 +138,40 @@ const {products}=useAppSelector(state=>state.cartR)
                    
                        </figure>
                     </Link>
-                  </div>
+                  </li>
                 ) : (
                   <Link href={"/login"} passHref>
-                    <span className={style.loginButton}>
+                    <div className={style.loginButton}>
                       <SimpleButton>Log In</SimpleButton>
-                    </span>
+                    </div>
                   </Link>
                 )}
               </span>
             </ul>
           </div>
         </div>
-        <div className={style.lastHeader}>
-          <Navbar />
-        </div>
-        <div className="mx-2">
-          <div
-            className={`${style.searchInput} md:hidden flex items-center justify-between py-2  `}
-          >
-            {/* <span className="sr-only">Search</span> */}
+      
 
-            <input
-              className="placeholder:italic placeholder:text-slate-400 block bg-white w-full  py-2 pr-3  focus:outline-none   sm:text-sm"
-              placeholder="Medicine Search for anything..."
-              type="text"
-              name="search"
-            />
-            <p className="searchIcon">
-              <AiOutlineSearch />
-            </p>
-          </div>
-        </div>
+<div className={style.lastHeader}>
+<Navbar />
+</div>
+<div className="mx-2">
+<div
+  className={`${style.searchInput} md:hidden flex items-center justify-between py-2  `}
+>
+  {/* <span className="sr-only">Search</span> */}
+
+  <input
+    className="placeholder:italic placeholder:text-slate-400 block bg-white w-full  py-2 pr-3  focus:outline-none   sm:text-sm"
+    placeholder="Medicine Search for anything..."
+    type="text"
+    name="search"
+  />
+  <p className="searchIcon">
+    <AiOutlineSearch />
+  </p>
+</div>
+</div>
       </div>
     </div>
   );

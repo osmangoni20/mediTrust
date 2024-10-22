@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+import { StaticImageData } from "next/image";
+
 export type TMedicine ={
     _id:string,
     id: number;
@@ -10,7 +14,9 @@ export type TMedicine ={
       used: string;
       sideEffect: string;
       quantity:number;
-      order_price:number
+      order_price:number;
+      brand:string;
+      description:string;
   
   }
 
@@ -26,3 +32,14 @@ export type TMedicine ={
         transactionId: string;
     };
 }
+
+export type doctorData= {
+    _id: any;
+    id: number;
+    img: StaticImageData;
+    category: string;
+    name: string;
+    designation: string;
+    education: string;
+    jobTitle: string;
+  }

@@ -1,22 +1,9 @@
 import style from "@/styles/Sass/Components/Home/Medicine.module.scss";
 import Product from "../common/Product";
 import LargestButton from "../Custom/Button/LargestButton";
-import { GetServerSideProps } from "next";
-interface Data {
-  _id:string;
-  id: number;
-  category: string;
-  name: string;
-  img: string;
-  price: number;
-  brand:string;
-  description:string;
-  productType: string;
-  capacity: string;
-  used: string;
-  sideEffect: string;
-}
-const Medicine = ({data}:{data:Data[]}) => {
+import { TMedicine } from "@/Type/type";
+
+const Medicine = ({data}:{data:TMedicine[]}) => {
 
 
   return (
@@ -51,9 +38,4 @@ const Medicine = ({data}:{data:Data[]}) => {
 //     },
 //   };
 // };
-export const getServerSideProps =(async()=>{
-  const res = await fetch('https://medstar-backend.onrender.com/doctor')
-  const data: Data = await res.json()
-  return {props:{data}}
-})satisfies GetServerSideProps<{ data: Data }>
 export default Medicine;

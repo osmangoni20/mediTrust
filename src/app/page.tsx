@@ -1,4 +1,4 @@
-"use client"
+/* eslint-disable @next/next/no-async-client-component */
 import Head from "next/head";
 import Meta from "@/components/common/Meta";
 import Ambulance from "@/components/Home/Ambulance";
@@ -8,7 +8,12 @@ import Features from "@/components/Home/Features";
 import Prescription from "@/components/Home/Prescription";
 import Doctor from "@/components/Home/Doctor";
 import Medicine from "@/components/Home/Medicine";
-export default function Home() {
+import { doctorData } from "@/Type/type";
+export default async function Page() {
+  const doctorData = await fetch('https://medstar-backend.onrender.com/doctor')
+  const medicineData=await fetch('https://medstar-backend.onrender.com/medicine')
+  const doctorInfo:doctorData[] = await doctorData.json()
+  const medicineInfo=await medicineData.json()
   return (
     <div>
     <Head>
@@ -19,13 +24,13 @@ export default function Home() {
         description="initial-scale=1.0, width=device-width"
       />
     </Head>
-    {/* <BannerAndDoctorAdd/> */}
-    {/* <PatientService/>
+     <BannerAndDoctorAdd/>
+     <PatientService/>
     <Features/>
     <Prescription/>
-    <Ambulance/>
-    <Doctor data={[]}/>
-    <Medicine data={[]}/> */}
+   <Ambulance/>
+   <Doctor data={doctorInfo}/>
+    <Medicine data={medicineInfo}/> 
   </div>
   );
 }

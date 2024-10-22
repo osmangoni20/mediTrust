@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+'use client';
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
@@ -7,7 +8,6 @@ import "slick-carousel/slick/slick.css";
 import style from "@/styles/Sass/Components/Home/doctorCarousel.module.scss";
 import SimpleButton from "../Custom/Button/SimpleButton";
 import UseFirebase from "../hooks/UseFirebase";
-import { GetServerSideProps } from "next";
 
 interface doctorData {
   _id: any;
@@ -96,14 +96,14 @@ const Doctor = ({data}:{data:doctorData[]}) => {
   console.log(data);
   return (
     <div className={`${style.carousel} transition-all duration-500 ease-in`}>
-      {/* <div
-        className={`${style.titlePart} md:flex justify-between items-center my-6`}
+      <div
+        className={`${style.titlePart} md:flex justify-between items-center `}
       >
-        <h2 className={`${style.title}`}>Our Doctor</h2>
+        <h3 className={`${style.title} text-3xl`}>Our Doctor</h3>
         <Link href={"/"}>
-          <p>View All</p>
+          <p className="text-black text-sm font-semibold">View All</p>
         </Link>
-      </div> */}
+      </div>
 
       <div className={`${style.DoctorCarousel_inner} `}>
         <Slider {...settings}>
@@ -111,22 +111,23 @@ const Doctor = ({data}:{data:doctorData[]}) => {
             return (
               <div
                 key={index}
-                className={`${style.doctorCard} card lg:w-84 md:w-84  shadow rounded-lg`}
+                className={`${style.doctorCard} card  w-[250px]  shadow rounded-lg`}
               >
-                <figure className="h-[200px]">
+                <div className="h-[220px]">
                   <Image
-                    src={doctor.img}
-                    alt={doctor.name}
-                    height={200}
-                    width={200}
+                    src={doctor?.img}
+                    alt={doctor?.name}
+                    width={320}
+                    height={220}
+                    className="h-[220px] pt-2"
                   />
-                </figure>
-                <div className={`${style.doctorCardBody} card-body `}>
+                </div>
+                <div className={`${style.doctorCardBody} card-body space-y-3 py-3`}>
                   <h2 className="text-center">{doctor.name}</h2>
                   <p>{doctor.designation}</p>
                   <p>{doctor.education}</p>
                   <p>{doctor.jobTitle}</p>
-                  <div className="card-actions justify-center">
+                  <div className="card-actions flex justify-center">
                     <Link href={ user.email?`/doctor/${doctor._id}`:'/login'} passHref>
                    
                         <SimpleButton>Appointment</SimpleButton>
@@ -142,12 +143,4 @@ const Doctor = ({data}:{data:doctorData[]}) => {
     </div>
   );
 };
-
-export const getServerSideProps = (async () => {
-  // Fetch data from external API
-  const res = await fetch('https://medstar-backend.onrender.com/doctor')
-  const data: doctorData = await res.json()
-  // Pass data to the page via props
-  return { props: { data } }
-}) satisfies GetServerSideProps<{ data: doctorData }>
 export default Doctor;

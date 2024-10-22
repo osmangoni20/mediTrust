@@ -37,9 +37,15 @@ const Navbar = () => {
               >
                 {Links.map((link, index) => (
                   <li key={index} className="md:ml-8 text-base md:my-0 py-2">
-                    <Link href={link.link} passHref>
-                      <li className="text-white  duration-500">{link.name}</li>
-                    </Link>
+                    
+                      
+                      <Link href={link.link} passHref>
+                      <span className="text-white  duration-500">
+                        {link.name}
+                        </span>
+                        </Link>
+                       
+                    
                   </li>
                 ))}
               </ul>
@@ -56,11 +62,11 @@ const Navbar = () => {
                       "text-center md:text-left"
                     } md:ml-8 text-base md:my-0 p-2 pr-0`}
                   >
-                    <Link href={link.link} passHref>
-                      <li className="text-white md:text-xl font-bold duration-500">
-                        {link.name}
-                      </li>
-                    </Link>
+                     <Link href={link.link} passHref>
+                      <span className="text-white md:text-xl font-bold duration-500">
+                      {link.name} 
+                      </span>
+                      </Link>
                   </li>
                 ))}
               </ul>

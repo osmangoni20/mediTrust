@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { ImRadioChecked } from "react-icons/im";
-import style from "../../styles/Sass/common/categories.module.scss";
+import style from "@/styles/Sass/common/categories.module.scss";
 const Categories = ({ data }: { data: any }) => {
   const route = useRouter();
   const HandleSearch = (category: any) => {

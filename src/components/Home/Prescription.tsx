@@ -60,7 +60,7 @@ const Prescription = () => {
         className={`${style.prescription} md:flex items-center md:gap-9 md:justify-evenly`}
       >
         <div className={`${style.prescriptionRules}`}>
-          <h2 className={`text-center mt-5  my-2 font-bold`}>
+          <h2 className={`text-center mt-5 text-3xl  my-2 font-bold`}>
             Order By Prescription
           </h2>
           {prescriptionUploadRules.map((rules) => {

@@ -116,15 +116,15 @@ const Features = () => {
           return (
             <div
               key={feature.id}
-              className={`${style.featuresCard}  card w-84 bg-base-100 shadow-xl`}
+              className={`${style.featuresCard} bg-[#4C9DC3]  card w-84 py-4 rounded-xl text-white shadow-xl`}
             >
               <div
                 className={` flex items-center card-body pt-5 pb-2 pl-3 pr-1`}
               >
                 <div>
-                  <h3 className="text-center  text-2xl font-bold">
+                  <h4 className="text-center text-white  text-2xl font-bold">
                     {feature.type}
-                  </h3>
+                  </h4>
 
                   {feature.featuresData.map((data) => (
                     <li className={`${style.service}`} key={data.id}>
@@ -136,7 +136,7 @@ const Features = () => {
                     </li>
                   ))}
 
-                  <div className="card-actions justify-center">
+                  <div className="card-actions flex justify-center">
                     <Link href={`/${feature.link}`}>
                      
                         <SimpleButton>{feature.buttonName}</SimpleButton>
