@@ -8,12 +8,12 @@ import Features from "@/components/Home/Features";
 import Prescription from "@/components/Home/Prescription";
 import Doctor from "@/components/Home/Doctor";
 import Medicine from "@/components/Home/Medicine";
-import { doctorData } from "@/Type/type";
+import { doctorData, TMedicine } from "@/Type/type";
 export default async function Page() {
   const doctorData = await fetch('https://medstar-backend.onrender.com/doctor')
   const medicineData=await fetch('https://medstar-backend.onrender.com/medicine')
   const doctorInfo:doctorData[] = await doctorData.json()
-  const medicineInfo=await medicineData.json()
+  const medicineInfo:TMedicine[]=await medicineData.json()
   return (
     <div>
     <Head>

@@ -9,7 +9,7 @@ const Medicine = ({data}:{data:TMedicine[]}) => {
   return (
     <div className={`${style.medicine}`}>
       <div className={`${style.title} flex justify-center`}>
-        <h2 className="text-center">Medicine Corner</h2>
+        <h2 className="text-center text-[#4C9DC3]">Medicine Corner</h2>
       </div>
 
       <div className="mt-10">

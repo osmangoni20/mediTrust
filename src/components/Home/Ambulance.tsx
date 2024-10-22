@@ -53,7 +53,7 @@ const Ambulance = () => {
       <div
         className={`${style.titlePart} md:flex justify-center items-center my-6`}
       >
-        <h2>Ambulance Service</h2>
+        <h2 className="text-[#4C9DC3]">Ambulance Service</h2>
       </div>
       <div
         className={` md:grid sm:grid-cols-2 grid-cols-1 md:grid-cols-4 gap-6`}

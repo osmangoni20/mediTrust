@@ -1,16 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
-import { useRouter } from "next/router";
-import { ParsedUrlQuery } from "querystring";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { bindActionCreators } from "redux";
-import { actionCreators, State } from "../../../State";
 import style from "@/styles/Sass/common/model/dynamicModel.module.scss";
 import SimpleButton from "../../Custom/Button/SimpleButton";
-import UseFirebase from "../../hooks/UseFirebase";
-import CustomModel from "./CustomModel";
-import { useAppDispatch } from "../../../redux/hooks";
-import { addToCart, deleteProduct, updateProduct } from "../../../redux/feature/CartSlice";
+import {useAppDispatch } from "@/app/redux/hooks";
+import { addToCart, updateProduct } from "@/app/redux/feature/CartSlice";
 interface Data {
   id: number;
   _id:string,
@@ -24,21 +18,11 @@ interface Data {
   sideEffect: string;
 }
 
-interface Person {
-  name: string;
-}
-interface StarWarsProductProps {
-  product: Data;
-}
 
-interface Params extends ParsedUrlQuery {
-  productId: string;
-}
 const ProductModel = ({
   data,
   setModel,
   showModel,
-  user
 }: {
   data: Data;
   showModel: any;
@@ -46,20 +30,15 @@ const ProductModel = ({
   user:any
 }) => {
   const [countValue, setContValue] = useState(1);
-  const route = useRouter();
   
-  const totalCardNumber = useSelector((state: State) => state.cart);
-  const [errorModel, setErrorModel] = useState(false);
-  const [modelData, setModelData] = useState({});
-  const [totalCartProduct, setTotalCartProduct] = useState<any>();
   const dispatch=useAppDispatch()
   const HandleIncrease = (id:any) => {
-    // dispatch(updateProduct({id,type:"increment"}))
+    dispatch(updateProduct({id,type:"increment"}))
     setContValue((count) => count + 1);
   };
   const HandleDecrease = (id:any) => {
     if (countValue > 1) {
-      // dispatch(updateProduct({id,type:"decrement"}))
+      dispatch(updateProduct({id,type:"decrement"}))
 
       setContValue((count) => count - 1);
     }
@@ -80,62 +59,14 @@ const ProductModel = ({
     console.log("product", product);
     dispatch(addToCart(product))
     setModel(false)
-    // const fetchData = async () => {
-    //   // get the data from the api
-    //   const res = await fetch("https://medstar-backend.onrender.com/my-cart", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-type": "application/json",
-    //     },
-    //     body: JSON.stringify(product),
-    //   });
-    //   // convert data to json
-    //   const data = await res.json();
-    //   console.log(data);
-    //   if (data.insertedId) {
-    //     setModel(false);
-    //     IncrementOderCart();
-
-    //     if (typeof window !== "undefined") {
-    //       localStorage.setItem(
-    //         "CountCartProduct",
-    //         `${Number(totalCardNumber + 1)}`
-    //       );
-    //     }
-    //     // route.reload();
-    //   }
-    // };
-
-    // call the function
-    // if (user.email) {
-    //   fetchData()
-    //     // make sure to catch any error
-    //     .catch(console.error);
-    // } else {
-    //   setErrorModel(!errorModel);
-    //   setModelData({
-    //     text1: "Not Found User",
-    //     text2: "Please Login Account or Create New Account",
-    //     wrongType: true,
-    //   });
-
-    //   setTimeout(() => {
-    //     setModel(false);
-    //   }, 4000);
-    // }
+  
   };
   return (
     <div>
       {showModel && (
         <div className={`${style.popup_container}`}>
           <div className={`${style.addProduct_inner_popup}`}>
-            {errorModel && (
-              <CustomModel
-                modelData={modelData}
-                showModel={errorModel}
-                setModel={setErrorModel}
-              ></CustomModel>
-            )}
+          
             <label
               onClick={() => setModel(false)}
               className="btn btn-sm btn-circle absolute right-2 top-2"
