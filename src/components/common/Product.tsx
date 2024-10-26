@@ -24,6 +24,7 @@ interface Data {
 const Product = ({ product }: { product: Data }) => {
   const [showModel, setModel] = useState<boolean>(false);
   const { user }: any = UseFirebase();
+  console.log(product?.img)
   return (
     <div>
       {showModel && (
@@ -37,7 +38,7 @@ const Product = ({ product }: { product: Data }) => {
       <div className={`${style.productCart} card  w-84  shadow`}>
         <figure>
           <Image
-            src={product.img}
+            src={product?.img}
             width={250}
             height={200}
             alt={product.name}

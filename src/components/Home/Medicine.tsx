@@ -5,7 +5,7 @@ import { TMedicine } from "@/Type/type";
 
 const Medicine = ({data}:{data:TMedicine[]}) => {
 
-
+console.log(data)
   return (
     <div className={`${style.medicine}`}>
       <div className={`${style.title} flex justify-center`}>
